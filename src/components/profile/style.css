@@ -16,8 +16,8 @@
 .profileCover {
   background-color: gold;
   position: relative;
-  padding: 0 40px;
-  right: 10px;
+  padding: 0 50px;
+  right: 20px;
 }
 .profileText {
   display: flex;
