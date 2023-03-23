@@ -10,7 +10,7 @@
 }
 
 #container {
-  width: 100vw;
+  max-width: 100vw;
   display: flex;
   background-image: linear-gradient(to right, var(--pick1), var(--pick2));
   flex-direction: column;
@@ -18,17 +18,20 @@
   padding: 10px;
 }
 
-
 h3 {
-  padding: 5px 10px;
+  padding: 5px 5px;
 }
 
 .content {
   display: flex;
   gap: 10px;
-  width: 100%;
   align-items: flex-start;
   justify-content: flex-start;
+  border: 2px solid red;
+}
+
+.extras {
+  margin-top: 10px;
 }
 
 .first {

@@ -84,12 +84,14 @@ export default class Template extends React.Component {
             </div>
             <div>
               {" "}
-              <button onClick={this.generate} className="generate">
-                Generate pdf
-              </button>
-              <button onClick={this.toggle} className="clearCV">
-                Clear CV
-              </button>
+              <div className="extras">
+                <button onClick={this.generate} className="generate">
+                  Generate pdf
+                </button>
+                <button onClick={this.toggle} className="clearCV">
+                  Clear CV
+                </button>
+              </div>
               {this.state.modal && (
                 <div className="modal">
                   <div className="overlay" onClick={this.toggle}>

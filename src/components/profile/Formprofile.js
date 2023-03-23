@@ -6,7 +6,7 @@ export default class Formprofile extends React.Component {
   }
 
   render() {
-    const { item, text, obj } = this.props;
+    const { item, text, obj, putImage } = this.props;
     return (
       <div className="formCover">
         <form className="form ">
@@ -16,6 +16,7 @@ export default class Formprofile extends React.Component {
             id="avatar"
             name="avatar"
             capture
+            onChange={putImage}
             accept="image/png, image/jpeg"
           />
           <label htmlFor="profilename">input your name</label>

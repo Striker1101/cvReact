@@ -13,10 +13,14 @@ export default class Profile extends React.Component {
         obj: "Any objectives",
       },
       toggle: false,
+      display: false,
+      _class: "uploadFile",
     };
     this.display = this.display.bind(this);
     this.handleChangeObj = this.handleChangeObj.bind(this);
     this.handleChangeText = this.handleChangeText.bind(this);
+    this.dragNdrop = this.dragNdrop.bind(this);
+    this.handlePreview = this.handlePreview.bind(this);
   }
   display() {
     this.setState({
@@ -41,15 +45,23 @@ export default class Profile extends React.Component {
       },
     });
   };
+  dragNdrop = (event) => {
+    var fileName = URL.createObjectURL(event.target.files[0]);
+    var previewImg = document.getElementById("profileImage");
+    previewImg.setAttribute("src", fileName);
+  };
+  handlePreview = () => {
+    document.getElementById("preview").style.cssText = "display:none; ";
+    document.getElementById("preview").children[2].remove();
+    document.getElementById("dragbox").style.display = "flex";
+  };
+
+
   render() {
     return (
       <>
         <div className="profile" onClick={this.display}>
-          <img
-            src={this.state.item.img}
-            alt="profile"
-            className="profileImage"
-          />
+          <img id="profileImage" src={picture} alt="profile" />
           <div className="profileCover">
             <div className="profileText">
               <h2> {this.state.item.name}</h2>
@@ -62,6 +74,7 @@ export default class Profile extends React.Component {
             item={this.state.item}
             text={this.handleChangeText}
             obj={this.handleChangeObj}
+            putImage={this.dragNdrop}
           />
         )}
       </>
