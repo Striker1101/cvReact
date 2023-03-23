@@ -1,0 +1,53 @@
+:root {
+    --color: black;
+    --pick1: white;
+    --pick2: black;
+  }
+  
+  * {
+    padding: 3px;
+    margin: 0;
+  }
+  
+  #root {
+    background-image: linear-gradient(to right, var(--pick1), var(--pick2));
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .content {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    align-items: flex-start;
+    justify-content:flex-start;
+  }
+  .first {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 50%;
+  }
+  
+  .first.second {
+    background-color: lightgray;
+  }
+  .formCover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid red;
+    flex-wrap: nowrap;
+    width: fit-content;
+    border-radius: 20px;
+  }
+  
