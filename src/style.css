@@ -1,7 +1,7 @@
 :root {
   --color: black;
   --pick1: white;
-  --pick2: black;
+  --pick2: gray;
 }
 
 * {
@@ -55,8 +55,8 @@ h3 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 2px solid red;
   flex-wrap: nowrap;
   width: fit-content;
   border-radius: 20px;
+  padding: 5px;
 }
