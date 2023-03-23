@@ -15,7 +15,7 @@ export default class Template extends React.Component {
       education: "Education",
       experience: "Experience",
       change: false,
-      modal: false
+      modal: false,
     };
     this.generate = this.generate.bind(this);
     this.clear = this.clear.bind(this);
@@ -27,7 +27,7 @@ export default class Template extends React.Component {
       change: !this.state.change,
       education: "Education",
       experience: "Experience",
-      modal: this.state.modal
+      modal: this.state.modal,
     });
     console.log(this.state.change);
   }
@@ -36,7 +36,7 @@ export default class Template extends React.Component {
       education: "Education",
       experience: "Experience",
       modal: !this.state.modal,
-      change: this.state.change
+      change: this.state.change,
     });
   }
   generate = () => {
@@ -50,7 +50,7 @@ export default class Template extends React.Component {
     html2canvas(input, {
       logging: true,
       letterRendering: 0,
-      useCORS: true
+      useCORS: true,
     }).then((canvas) => {
       const imgWidth = 208;
       const imgHeight = (canvas.height * imgWidth) / canvas.width;

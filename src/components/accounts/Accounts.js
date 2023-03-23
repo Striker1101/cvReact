@@ -9,9 +9,9 @@ export default class Accounts extends React.Component {
       toggle: false,
       media: {
         url: "",
-        map: ""
+        map: "",
       },
-      items: []
+      items: [],
     };
     this.display = this.display.bind(this);
     this.handleChangeMedia = this.handleChangeMedia.bind(this);
@@ -19,7 +19,7 @@ export default class Accounts extends React.Component {
   }
   display() {
     this.setState({
-      toggle: !this.state.toggle
+      toggle: !this.state.toggle,
     });
   }
   handleChangeMedia(e) {
@@ -40,8 +40,8 @@ export default class Accounts extends React.Component {
     this.setState({
       media: {
         url: e.target.value,
-        map: _map
-      }
+        map: _map,
+      },
     });
   }
   onSubmit(e) {
@@ -52,13 +52,13 @@ export default class Accounts extends React.Component {
       items: this.state.items.concat(this.state.media),
       media: {
         url: "",
-        map: ""
-      }
+        map: "",
+      },
     });
   }
   render() {
     return (
-      <>
+      <div className="accounts">
         <hr onClick={this.display}></hr>
         <Media items={this.state.items} />
         {this.state.toggle && (
@@ -68,7 +68,7 @@ export default class Accounts extends React.Component {
             handle={this.handleChangeMedia}
           />
         )}
-      </>
+      </div>
     );
   }
 }
